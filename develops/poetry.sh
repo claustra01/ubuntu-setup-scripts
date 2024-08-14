@@ -9,8 +9,8 @@ if [ -z "$PYENV_ROOT" ]; then
   source ~/.bashrc
 fi
 
-pyenv install 3.11.6
-pyenv global 3.11.6
+pyenv install 3.12.5
+pyenv global 3.12.5
 
 curl -sSL https://install.python-poetry.org | python3 -
 source ~/.bashrc
