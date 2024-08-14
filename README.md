@@ -16,6 +16,7 @@ git clone https://github.com/claustra01/ubuntu-setup-scripts
 - Gradle
 - PostgreSQL
 - ngrok
+- docker
 - LaTeX (texlive) [VSCode参考](https://qiita.com/uoyuki/items/c0b3feeb80f9a2699759)
 - CTFによく使用するツール群
 - その他よく使用するコマンド群
