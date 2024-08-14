@@ -14,7 +14,8 @@ sudo apt -y upgrade
 ./develops/postgres.sh
 
 ./tools/ngrok.sh
-./tools/texlive.sh
+./tools/docker.sh
 ./tools/ctf.sh
+./tools/texlive.sh
 
 sudo apt -y autoremove
