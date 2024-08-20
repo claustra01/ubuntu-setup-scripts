@@ -4,3 +4,4 @@ wget \
 zip unzip \
 tar \
 make \
+tree
