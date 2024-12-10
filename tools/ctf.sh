@@ -1,4 +1,4 @@
-sudo apt -y install file strings checksec binwalk patchelf
+sudo apt -y install file strings checksec binwalk patchelf sagemath
 
 # gdb-peda
 sudo apt -y install gdb gdbserver
