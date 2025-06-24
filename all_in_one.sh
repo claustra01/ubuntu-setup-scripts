@@ -27,6 +27,7 @@ echo -e "\e[36m-------- build-essential installed --------\e[m"
 # nodejs
 curl https://get.volta.sh | bash
 source ~/.bashrc
+exec $SHELL
 volta --version || err
 volta install node
 
@@ -45,6 +46,7 @@ if [ -z "$PYENV_ROOT" ]; then
     echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
 fi
 source ~/.bashrc
+exec $SHELL
 pyenv --version || err
 
 sudo apt -y install \
