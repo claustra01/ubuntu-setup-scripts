@@ -2,8 +2,7 @@
 
 - このコマンドでスクリプトをダウンロードできます
 ```sh
-curl -L https://raw.githubusercontent.com/claustra01/ubuntu-setup-scripts/main/all_in_one.sh -o all_in_one.sh
-chmod +x all_in_one.sh
+curl -L https://raw.githubusercontent.com/claustra01/ubuntu-setup-scripts/main/all_in_one.sh -o all_in_one.sh && chmod +x all_in_one.sh
 ```
 
 - このコマンドでスクリプトを実行できます
