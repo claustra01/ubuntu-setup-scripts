@@ -120,7 +120,7 @@ echo -e "\e[36m-------- sagemath installed --------\e[m"
 
 
 # ctf tools
-sudo apt -y install file checksec gdb gdbserver wireshark
+sudo apt -y install file checksec gdb gdbserver
 git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 gdb --version || err
