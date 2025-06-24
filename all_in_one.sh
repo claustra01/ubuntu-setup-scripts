@@ -77,3 +77,35 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo --version || err
 echo -e "\e[36m-------- rust installed --------\e[m"
 
+
+# docker
+sudo apt -y install ca-certificates gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo \
+    "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt -y update
+sudo apt -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo docker run hello-world
+
+sudo usermod -aG docker $(whoami)
+newgrp docker
+
+
+# ngrok
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+tar -xzvf ngrok-v3-stable-linux-amd64.tgz
+sudo mv ngrok /usr/local/bin
+rm ngrok-v3-stable-linux-amd64.tgz
+ngrok --version || err
+echo -e "\e[36m-------- ngrok installed --------\e[m"
+
+
+# refresh
+sudo apt -y autoremove
+echo -e "\e[36m-------- all installation completed! --------\e[m"
