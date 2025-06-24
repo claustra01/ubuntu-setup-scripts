@@ -24,6 +24,8 @@ chmod +x all_in_one.sh
 - docker
 - ngrok
 - latex (texlive)
+- sagemath
+- CTFでよく利用するツール群
 
 
 # 注意点
