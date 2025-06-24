@@ -1,10 +1,18 @@
 # 使い方
-- 以下のコマンドでレポジトリをクローンできます。
+
+- このコマンドでスクリプトをダウンロードできます
 ```sh
-git clone https://github.com/claustra01/ubuntu-setup-scripts
+curl -L https://raw.githubusercontent.com/claustra01/ubuntu-setup-scripts/main/all_in_one.sh -o all_in_one.sh
+chmod +x all_in_one.sh
 ```
-- `all.sh`を実行すると以下の全てがインストールされます。
-- 一部のみインストールしたい場合は該当するスクリプトのみを実行してください。
+
+- このコマンドでスクリプトを実行できます
+    - `error: reboot terminal and try again!`というメッセージが表示されたらターミナルを再起動して再度実行してください
+    - `all installation completed!`というメッセージが表示されたら全ての環境構築が完了しています
+```sh
+./all_in_one.sh
+```
+
 
 # インストールされるもの
 - C/C++ (build-essential)
