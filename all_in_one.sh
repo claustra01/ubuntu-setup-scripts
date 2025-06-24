@@ -113,7 +113,12 @@ echo -e "\e[36m-------- latex installed --------\e[m"
 
 
 # sagemath
-sudo apt -y install sagemath
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+source ~/miniforge3/etc/profile.d/conda.sh
+mamba create -n sage sage python=3.12
+conda activate sage
+rm Miniforge3-$(uname)-$(uname -m).sh
 sage --version || err
 sage -sh -c "pip install pycryptodome pwntools"
 echo -e "\e[36m-------- sagemath installed --------\e[m"
