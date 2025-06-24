@@ -122,8 +122,10 @@ conda init
 source $(conda info --base)/etc/profile.d/conda.sh
 conda activate sage
 sage --version || err
-echo 'alias sage="conda activate sage && sage"' >> ~/.bashrc
-source ~/.bashrc
+if [ -z "$SAGE_ROOT" ]; then
+  echo 'export SAGE_ROOT=$(conda info --base)/envs/sage' >> ~/.bashrc
+  echo 'export PATH=$SAGE_ROOT/bin:$PATH' >> ~/.bashrc
+fi
 sage -sh -c "pip install pycryptodome pwntools"
 echo -e "\e[36m-------- sagemath installed --------\e[m"
 
