@@ -94,7 +94,7 @@ sudo apt -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin d
 sudo docker run hello-world || err
 
 sudo usermod -aG docker $(whoami)
-newgrp docker
+echo -e "\e[36m-------- docker installed --------\e[m"
 
 
 # ngrok
@@ -134,4 +134,4 @@ echo -e "\e[36m-------- ctf tools installed --------\e[m"
 
 # apt autoremove
 sudo apt -y autoremove
-echo -e "\e[36m-------- all installation completed! --------\e[m"
+echo -e "\e[36m-------- all installation completed! reboot terminal! --------\e[m"
