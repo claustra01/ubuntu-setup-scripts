@@ -30,8 +30,7 @@ chmod +x all_in_one.sh
 
 # 注意点
 
-- ngrokの使用にはAuthTokenの設定が必要です
-[ここ](https://ngrok.com/)でアカウント登録後トークンを発行し、以下のコマンドを実行してください
+- ngrokを使用する前に[ここ](https://ngrok.com/)でアカウント登録後トークンを発行し、以下のコマンドを実行してください
 ```sh
 ngrok config add-authtoken <token>
 ```
