@@ -118,8 +118,8 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 source ~/miniforge3/etc/profile.d/conda.sh
 conda init
 mamba create -n sage sage python=3.12
-alias sage="conda activate sage && sage" || err
 rm Miniforge3-$(uname)-$(uname -m).sh
+alias sage="conda activate sage && sage" || err
 sage --version || err
 sage -sh -c "pip install pycryptodome pwntools"
 echo -e "\e[36m-------- sagemath installed --------\e[m"

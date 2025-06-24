@@ -9,8 +9,9 @@ curl -L https://raw.githubusercontent.com/claustra01/ubuntu-setup-scripts/main/a
 ```
 
 - このコマンドでスクリプトを実行できます
-    - `error: reboot terminal and try again!`というメッセージが表示されたらターミナルを再起動して再度実行してください
-    - `all installation completed! reboot terminal!`というメッセージが表示されたら全ての環境構築が完了しています
+    - 途中で何らかの操作を求められた場合、いい感じに対応してください
+    - `error: reboot terminal and try again!`というメッセージが表示された場合、ターミナルを再起動して再度実行してください
+    - 全ての環境構築が完了後、`all installation completed! reboot terminal!`というメッセージが表示されます
     - 環境構築完了後はターミナルを一度再起動してください
 ```sh
 ./all_in_one.sh
