@@ -112,6 +112,21 @@ tex -version || err
 echo -e "\e[36m-------- latex installed --------\e[m"
 
 
+# sagemath
+sudo apt -y install sagemath
+sage --version || err
+sage -sh -c "pip install pycryptodome pwntools"
+echo -e "\e[36m-------- sagemath installed --------\e[m"
+
+
+# ctf tools
+sudo apt -y install file checksec gdb gdbserver wireshark
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+gdb --version || err
+echo -e "\e[36m-------- ctf tools installed --------\e[m"
+
+
 # apt autoremove
 sudo apt -y autoremove
 echo -e "\e[36m-------- all installation completed! --------\e[m"
