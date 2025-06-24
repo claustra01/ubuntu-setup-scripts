@@ -27,7 +27,6 @@ echo -e "\e[36m-------- build-essential installed --------\e[m"
 # nodejs
 curl https://get.volta.sh | bash
 source ~/.bashrc
-exec $SHELL
 volta --version || err
 volta install node
 
@@ -46,7 +45,6 @@ if [ -z "$PYENV_ROOT" ]; then
     echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
 fi
 source ~/.bashrc
-exec $SHELL
 pyenv --version || err
 
 sudo apt -y install \
@@ -118,8 +116,9 @@ echo -e "\e[36m-------- latex installed --------\e[m"
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 source ~/miniforge3/etc/profile.d/conda.sh
+conda init
 mamba create -n sage sage python=3.12
-conda activate sage
+alias sage="conda activate sage && sage" || err
 rm Miniforge3-$(uname)-$(uname -m).sh
 sage --version || err
 sage -sh -c "pip install pycryptodome pwntools"
