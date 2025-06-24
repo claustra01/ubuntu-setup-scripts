@@ -120,10 +120,9 @@ echo -e "\e[36m-------- sagemath installed --------\e[m"
 
 
 # ctf tools
-sudo apt -y install file checksec gdb gdbserver
-git clone https://github.com/longld/peda.git ~/peda
-echo "source ~/peda/peda.py" >> ~/.gdbinit
-gdb --version || err
+sudo apt -y install file checksec
+curl -qsL 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb
+pwndbg --version || err
 echo -e "\e[36m-------- ctf tools installed --------\e[m"
 
 
