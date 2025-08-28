@@ -37,21 +37,7 @@ echo -e "\e[36m-------- nodejs installed --------\e[m"
 
 
 # python3
-rm -rf ~/.pyenv
-curl -fsSL https://pyenv.run | bash
-if [ -z "$PYENV_ROOT" ]; then
-    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-    echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-    echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
-fi
-source ~/.bashrc
-pyenv --version || err
-
-sudo apt -y install \
-    libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-latest=$(pyenv install --list | grep -E "^\s*[0-9]+\.[0-9]+\.[0-9]+$" | tail -1 | tr -d ' ')
-pyenv install $latest
-pyenv global $latest
+sudo apt -y install python3
 python3 --version || err
 
 curl -sSL https://install.python-poetry.org | python3 -
