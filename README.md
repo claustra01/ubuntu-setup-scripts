@@ -22,7 +22,7 @@ curl -L https://raw.githubusercontent.com/claustra01/ubuntu-setup-scripts/main/a
 - よく利用するコマンド群
 - c/c++ (build-essential)
 - javascript/typescript (nodejs, pnpm)
-- python3 (pyenv, poetry)
+- python3 (poetry)
 - golang
 - rust (cargo)
 - docker
