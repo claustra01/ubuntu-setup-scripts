@@ -92,6 +92,14 @@ ngrok --version || err
 echo -e "\e[36m-------- ngrok installed --------\e[m"
 
 
+# cloudflared
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+sudo mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
+sudo chmod +x /usr/local/bin/cloudflared
+cloudflared --version || err
+echo -e "\e[36m-------- cloudflared installed --------\e[m"
+
+
 # latex
 sudo apt install -y texlive-full
 tex -version || err

@@ -28,6 +28,7 @@ curl -L https://raw.githubusercontent.com/claustra01/ubuntu-setup-scripts/main/a
 - rust (cargo)
 - docker
 - ngrok
+- cloudflared
 - latex (texlive)
 - sagemath
 - CTFでよく利用するツール群
