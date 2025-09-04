@@ -40,3 +40,8 @@ curl -L https://raw.githubusercontent.com/claustra01/ubuntu-setup-scripts/main/a
 ```sh
 ngrok config add-authtoken <token>
 ```
+
+- cloudflaredを使用する際はログインが必要でうｓ
+```sh
+cloudflared login
+```
