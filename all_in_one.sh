@@ -64,6 +64,19 @@ cargo --version || err
 echo -e "\e[36m-------- rust installed --------\e[m"
 
 
+# php
+sudo apt -y install php php-cli php-mbstring unzip
+php --version || err
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer-setup.php'); exit(1); }"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv ./composer.phar $(dirname $(which php))/composer && chmod +x "$_"
+composer --version || err
+echo -e "\e[36m-------- php installed --------\e[m"
+
+
 # docker
 sudo apt -y install ca-certificates gnupg
 sudo install -m 0755 -d /etc/apt/keyrings

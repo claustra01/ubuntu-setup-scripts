@@ -26,6 +26,7 @@ curl -L https://raw.githubusercontent.com/claustra01/ubuntu-setup-scripts/main/a
 - python3 (poetry)
 - golang
 - rust (cargo)
+- php (composer)
 - docker
 - ngrok
 - cloudflared
