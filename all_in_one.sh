@@ -65,7 +65,7 @@ echo -e "\e[36m-------- rust installed --------\e[m"
 
 
 # php
-sudo apt -y install php php-cli php-mbstring unzip
+sudo apt -y install php php-cli php-mbstring php-xml
 php --version || err
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
