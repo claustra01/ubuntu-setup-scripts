@@ -119,6 +119,11 @@ tex -version || err
 echo -e "\e[36m-------- latex installed --------\e[m"
 
 
+# marp
+npm install -g @marp-team/marp-cli
+marp --version || err
+
+
 # sagemath
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh

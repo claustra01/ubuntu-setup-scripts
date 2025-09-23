@@ -31,6 +31,7 @@ curl -L https://raw.githubusercontent.com/claustra01/ubuntu-setup-scripts/main/a
 - ngrok
 - cloudflared
 - latex (texlive)
+- marp
 - sagemath
 - CTFでよく利用するツール群
 
