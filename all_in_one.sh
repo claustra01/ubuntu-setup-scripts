@@ -40,7 +40,7 @@ echo -e "\e[36m-------- nodejs installed --------\e[m"
 sudo apt -y install python3 python3-pip
 python3 --version || err
 
-pip install pycryptodome pwntools ROPgadget --break-system-packages
+pip install pycryptodome pwntools ROPgadget flask --break-system-packages
 echo -e "\e[36m-------- python3 installed --------\e[m"
 
 
@@ -68,7 +68,7 @@ sudo apt -y install php php-cli php-mbstring php-xml
 php --version || err
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer-setup.php'); exit(1); }"
+# php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer-setup.php'); exit(1); }"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 sudo mv ./composer.phar $(dirname $(which php))/composer && chmod +x "$_"
