@@ -142,7 +142,7 @@ echo -e "\e[36m-------- sagemath installed --------\e[m"
 
 
 # ctf tools
-sudo apt -y install file checksec objdump readelf patchelf ltrace strace binwalk tshark openssl hashcat
+sudo apt -y install file checksec patchelf ltrace strace binwalk tshark openssl hashcat
 curl -qsL 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb
 pwndbg --version || err
 echo -e "\e[36m-------- ctf tools installed --------\e[m"
