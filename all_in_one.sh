@@ -37,10 +37,10 @@ echo -e "\e[36m-------- nodejs installed --------\e[m"
 
 
 # python3
-sudo apt -y install python3-full
+sudo apt -y install python3 python3-pip
 python3 --version || err
 
-pip install pycryptodome pwntools ROPgadget
+pip install pycryptodome pwntools ROPgadget --break-system-packages
 echo -e "\e[36m-------- python3 installed --------\e[m"
 
 
