@@ -37,11 +37,10 @@ echo -e "\e[36m-------- nodejs installed --------\e[m"
 
 
 # python3
-sudo apt -y install python3
+sudo apt -y install python3-full
 python3 --version || err
 
-curl -sSL https://install.python-poetry.org | python3 -
-poetry --version || err
+pip install pycryptodome pwntools ROPgadget
 echo -e "\e[36m-------- python3 installed --------\e[m"
 
 
@@ -143,7 +142,7 @@ echo -e "\e[36m-------- sagemath installed --------\e[m"
 
 
 # ctf tools
-sudo apt -y install file checksec
+sudo apt -y install file checksec objdump readelf patchelf ltrace strace binwalk tshark openssl hashcat
 curl -qsL 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb
 pwndbg --version || err
 echo -e "\e[36m-------- ctf tools installed --------\e[m"
