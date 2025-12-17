@@ -47,3 +47,4 @@ ngrok config add-authtoken <token>
 ```sh
 cloudflared login
 ```
+- [このページ](https://qiita.com/harutiro/items/885c0df9662a0c6e6355)に従ってdomainを設定しておくとなお良いです
