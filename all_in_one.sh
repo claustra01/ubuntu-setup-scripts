@@ -145,6 +145,8 @@ echo -e "\e[36m-------- sagemath installed --------\e[m"
 sudo apt -y install file checksec patchelf ltrace strace binwalk python3-capstone tshark openssl hashcat
 curl -qsL 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb
 pwndbg --version || err
+sudo apt -y install ruby-dev
+sudo gem install seccomp-tools
 echo -e "\e[36m-------- ctf tools installed --------\e[m"
 
 
