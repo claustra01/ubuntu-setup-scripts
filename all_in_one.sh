@@ -120,6 +120,7 @@ echo -e "\e[36m-------- latex installed --------\e[m"
 
 # marp
 npm install -g @marp-team/marp-cli
+sudo apt -y install chromium-browser
 marp --version || err
 
 
